@@ -1,4 +1,5 @@
 import requests
+from pyfiglet import Figlet
 
 
 def get_info_by_ip(ip='127.0.0.1'):
@@ -22,6 +23,8 @@ def get_info_by_ip(ip='127.0.0.1'):
 
 
 def main():
+    pre_text = Figlet(font='slant')
+    print(pre_text.renderText('IP ---> INFO'))
     ip = input("Input IP to check: ")
     get_info_by_ip(ip=ip)
 
